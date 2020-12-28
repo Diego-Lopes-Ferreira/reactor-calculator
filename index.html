@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reactor Calculator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/inputs.css">
+</head>
+
+<body>
+  <!-- 
+    Table of Contents:
+    |--------------------------|
+    |                          |
+    | Form | Comparison | Form |
+    |                          |
+    |--------------------------|
+    |        | button |        |
+    |--------------------------|
+  -->
+  <div class="wrapper">
+    <form id="left">
+      <div class="input">
+        <p>Type</p>
+        <select class="energy-or-heat" id="l-eor"></select>
+      </div>
+      <div class="input">
+        <p>Production</p>
+        <div>
+          <input value="0" type="number" id="l-production" name="production">
+          <select class="type" id="l-production-type"></select>
+        </div>
+      </div>
+
+      <div class="input">
+        <p>Lifetime</p>
+        <div>
+          <input value="0" type="number" id="l-lifetime" name="lifetime">
+          <select class="type" id="l-lifetime-type"></select>
+        </div>
+      </div>
+
+      <div class="input">
+        <p>Cost</p>
+        <div>
+          <input value="0" type="number" id="l-cost" name="cost">
+          <select class="type" id="l-cost-type"></select>
+        </div>
+      </div>
+    </form>
+
+    <main id="center">
+      <h4>Left</h4>
+      <h3 id="left-result"></h3>
+      <p class="small"> vs </p>
+      <h3 id="right-result"></h3>
+      <h4>Right</h4>
+      <p class="small" id="time-setting"></p>
+    </main>
+
+    <form id="right">
+      <div class="input">
+        <p>Type</p>
+        <select class="energy-or-heat" id="r-eor"></select>
+      </div>
+      <div class="input">
+        <p>Production</p>
+        <div>
+          <input value="0" type="number" id="r-production" name="production">
+          <select class="type" id="r-production-type"></select>
+        </div>
+      </div>
+
+      <div class="input">
+        <p>Lifetime</p>
+        <div>
+          <input value="0" type="number" id="r-lifetime" name="lifetime">
+          <select class="type" id="r-lifetime-type"></select>
+        </div>
+      </div>
+
+      <div class="input">
+        <p>Cost</p>
+        <div>
+          <input value="0" type="number" id="r-cost" name="cost">
+          <select class="type" id="r-cost-type"></select>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <button id="calculate">Run</button>
+
+  <script>
+    const tests = true;
+  </script>
+  <script src="./scripts/numberStringConversion.js"></script>
+  <script src="./scripts/forms.js"></script>
+  <script src="./scripts/reactor.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>
